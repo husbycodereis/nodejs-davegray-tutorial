@@ -1,0 +1,5 @@
+20230316	14:03:30	3bb7aac9-0a75-4215-91bc-33d9cd76e9cc	Error 	 not allowed by cors
+20230316	14:04:03	b55c7f8a-cb4e-4aec-8e16-ddd337d81652	Error 	 not allowed by cors
+20230316	14:04:05	47e34792-a432-4352-bc2c-1ae4db081028	Error 	 not allowed by cors
+20230316	14:04:44	8eb031c4-3ec8-47b0-8116-612b26a88ec3	Error 	 not allowed by cors
+20230316	14:04:45	0600bb88-3217-4f56-8090-2c9ae4159150	Error 	 not allowed by cors

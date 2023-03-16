@@ -11,3 +11,13 @@
 20230316	13:53:37	ac4f82ce-8823-4ea2-8e21-bbdb1590ca3b	GET	 https://www.google.com	 /
 20230316	13:53:51	666f5407-3472-4424-a974-9a01c3d7bcef	OPTIONS	 https://codereis.com	 /
 20230316	13:53:51	0c87c48a-a22f-4740-a195-71e8e02dd2fc	GET	 https://codereis.com	 /
+20230316	14:03:03	68fafade-3f04-411e-ac1b-b21499c35421	GET	 undefined	 /
+20230316	14:03:30	c9850166-3e9c-4c76-aa32-73d5db711aa6	GET	 undefined	 /
+20230316	14:04:03	62755d58-b64e-419d-bb17-008532238713	GET	 undefined	 /
+20230316	14:04:05	40476c16-3795-4671-8bdc-743261408aca	GET	 undefined	 /
+20230316	14:04:44	c1ef3d92-3996-4358-9335-182705dcbffb	GET	 undefined	 /
+20230316	14:04:45	3fdeeea3-6d67-49ab-8b6b-549aedf3a0be	GET	 undefined	 /
+20230316	14:05:18	f695fbc0-5348-48ca-afe4-3e8f91aa985f	GET	 undefined	 /
+20230316	14:05:18	35f5b0a4-4344-4900-aa4e-99b451a76af6	GET	 undefined	 /css/style.css
+20230316	15:59:23	e3a762be-122c-4e72-a6a9-e3b67b1d6df9	GET	 undefined	 /anus
+20230316	15:59:23	c0efb4f5-0aea-45c7-81c7-c729f271d909	GET	 undefined	 /css/style.css

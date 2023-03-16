@@ -2,20 +2,17 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const { logger } = require("./middleware/logEvents");
+const errorHandler = require("./middleware/errorHandler");
 const cors = require("cors");
 
 const PORT = process.env.port || 4000;
 //custom logger middleware
 app.use(logger);
 //apply cors cross-origin-resource-sharing
-const whitelist = [
-  "https://www.codereis.com",
-  "https://codereis.com",
-  "http://localhost:4000",
-];
+const whitelist = ["https://www.codereis.com", "https://codereis.com"];
 const corsOptions = {
   origin: (origin, callback) => {
-    if (whitelist.indexOf(origin) !== -1) {
+    if (whitelist.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
       callback(new Error("not allowed by cors"));
@@ -52,7 +49,9 @@ app.get(
     res.send("Hello canim benim");
   }
 );
-app.get("/*", (req, res) => {
+app.all("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
+
+app.use(errorHandler);
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
