@@ -1,14 +1,36 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const PORT = process.env.port || 4000;
+const { logger } = require("./middleware/logEvents");
+const cors = require("cors");
 
+const PORT = process.env.port || 4000;
+//custom logger middleware
+app.use(logger);
+//apply cors cross-origin-resource-sharing
+const whitelist = [
+  "https://www.codereis.com",
+  "https://codereis.com",
+  "http://localhost:4000",
+];
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error("not allowed by cors"));
+    }
+  },
+  optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 //middleware is to handle form data
 app.use(express.urlencoded({ extended: false }));
 //middleware for json
-app.use(express.json);
+app.use(express.json());
 //middleware for serving static files
 app.use(express.static(path.join(__dirname, "/public")));
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "index.html"));
 });

@@ -1,0 +1,13 @@
+20230316	13:39:02	b7f97db9-4654-42bc-b4e3-a4ffaef0e6f9	GET	 undefined	 /
+20230316	13:39:17	55846500-b673-4c28-9ada-94e25b7d7efb	GET	 undefined	 /
+20230316	13:39:17	73605219-a7f7-4856-ad13-5d7254e6de8d	GET	 undefined	 /css/style.css
+20230316	13:42:30	d3f7b830-3a43-4b22-8464-61efc70cecc6	GET	 undefined	 /
+20230316	13:42:30	24bebda6-e856-42d4-b885-bcecc0cba2bc	GET	 undefined	 /css/style.css
+20230316	13:46:08	d0445115-8981-44b1-acb0-a3f8296c5a2a	GET	 undefined	 /
+20230316	13:46:09	e331e7d8-c9cb-4705-bab5-ae94c3c9147e	GET	 undefined	 /css/style.css
+20230316	13:48:56	1b763fa4-ace1-4d73-906c-88bd9da88ec5	OPTIONS	 https://www.google.com	 /
+20230316	13:48:56	bbb07d1f-ff98-45da-adf4-95cccad8c786	GET	 https://www.google.com	 /
+20230316	13:53:37	e47b525e-8856-47ef-b2fc-906e3959367d	OPTIONS	 https://www.google.com	 /
+20230316	13:53:37	ac4f82ce-8823-4ea2-8e21-bbdb1590ca3b	GET	 https://www.google.com	 /
+20230316	13:53:51	666f5407-3472-4424-a974-9a01c3d7bcef	OPTIONS	 https://codereis.com	 /
+20230316	13:53:51	0c87c48a-a22f-4740-a195-71e8e02dd2fc	GET	 https://codereis.com	 /
