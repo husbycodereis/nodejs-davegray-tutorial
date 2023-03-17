@@ -28,15 +28,9 @@ app.use(express.json());
 //middleware for serving static files
 app.use(express.static(path.join(__dirname, "/public")));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "index.html"));
-});
-app.get("/new-page(.html)?", (req, res) => {
-  res.sendFile(path.join(__dirname, "views", "new-page.html"));
-});
-app.get("/old-page(.html)?", (req, res) => {
-  res.redirect("/new-page.html");
-});
+app.use("/", require("./routes/root"));
+app.use("/subdir", require("./routes/subdir"));
+app.use("/employees", require("./routes/api/employees"));
 
 //Route Handlers
 app.get(
