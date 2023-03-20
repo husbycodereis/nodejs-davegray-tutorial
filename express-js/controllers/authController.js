@@ -23,10 +23,16 @@ const handleLogin = async (req, res) => {
   //evaluate password
   const match = await bcrypt.compare(password, foundUser.password);
   if (match) {
+    const roles = Object.values(foundUser.roles);
     //create JWT to use with other routes
     console.log(process.env.ACCESS_TOKEN_SECRET);
     const accessToken = jwt.sign(
-      { username: foundUser.username },
+      {
+        UserInfo: {
+          username: foundUser.username,
+          roles: roles,
+        },
+      },
       process.env.ACCESS_TOKEN_SECRET,
       { expiresIn: "30s" }
     );
@@ -50,7 +56,8 @@ const handleLogin = async (req, res) => {
       httpOnly: true,
       maxAge: 24 * 60 * 60 * 1000, //one day in miliseconds
       sameSite: "None",
-      secure: true,
+      //remove the line below when using thunderclient
+      // secure: true,
     });
     return res.json({ accessToken, refreshToken });
   } else {
