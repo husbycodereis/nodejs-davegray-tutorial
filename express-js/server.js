@@ -7,8 +7,13 @@ const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
 const verifyJWT = require("./middleware/verifyJWT");
 const cookieParser = require("cookie-parser");
-
+require("dotenv").config();
+const mongoose = require("mongoose");
 const PORT = process.env.port || 4000;
+const connectDB = require("./config/dbConn");
+
+//connect to mongoDB
+connectDB();
 //custom logger middleware
 app.use(logger);
 //apply cors cross-origin-resource-sharing
@@ -34,20 +39,14 @@ app.use("/logout", require("./routes/logout"));
 app.use(verifyJWT);
 app.use("/employees", require("./routes/api/employees"));
 
-//Route Handlers
-app.get(
-  "/hello(.html)?",
-  (req, res, next) => {
-    console.log("hello yukluyoruz");
-    next();
-  },
-  (req, res) => {
-    res.send("Hello canim benim");
-  }
-);
 app.all("*", (req, res) => {
   res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 
 app.use(errorHandler);
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+//this logic checks if mongodb is connected, if so, then the app listens to port
+mongoose.connection.once("open", () => {
+  console.log("connected to mongoDB");
+  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+});

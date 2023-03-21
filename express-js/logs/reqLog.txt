@@ -143,3 +143,5 @@
 20230320	14:35:40	fc22f2b2-c760-49c1-832a-4a03ebca6b18	GET	 undefined	 /employees
 20230320	14:35:47	7e8f3ec2-73a0-42d3-b78d-a9c07030474e	POST	 undefined	 /employees
 20230320	14:35:52	8d7d4340-2ff1-46a4-ab21-cabe65478c47	DELETE	 undefined	 /employees
+20230321	10:28:45	d37937b0-b114-4900-9f84-db73b5550557	POST	 undefined	 /register
+20230321	10:30:35	202393f8-7756-42e5-9765-2111c8766c00	POST	 undefined	 /register
