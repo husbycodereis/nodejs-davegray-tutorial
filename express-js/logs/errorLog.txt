@@ -6,3 +6,4 @@
 20230317	09:48:01	4d345030-1bab-4683-874b-3bf5406a957b	Error 	 ENOENT: no such file or directory, stat '/Users/alirizareisoglu/Project/back-end/node/learn/dave_gray/express-js/routes/,,/views/subdir/test.html'
 20230317	09:48:44	9b14b6fd-c8eb-41f1-bef5-9c88a51b2ed8	Error 	 ENOENT: no such file or directory, stat '/Users/alirizareisoglu/Project/back-end/node/learn/dave_gray/express-js/routes/,,/views/subdir/test.html'
 20230317	09:48:45	ea0f984d-ff46-4cda-8400-9e7673f82332	Error 	 ENOENT: no such file or directory, stat '/Users/alirizareisoglu/Project/back-end/node/learn/dave_gray/express-js/routes/,,/views/subdir/test.html'
+20230321	11:39:31	3991156e-0802-4e41-861a-d8a148183ce2	SyntaxError 	 Expected ',' or '}' after property value in JSON at position 15
